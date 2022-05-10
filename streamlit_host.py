@@ -32,7 +32,5 @@ if uploaded_file is not None:
         
         ypred = model.predict(img)
         ypred = ypred.round()
-        for i in range(4):
-           if ypred[0][i]:
-                a=i
+        a= ypred[0][0]
         st.title("{}".format(map_dict [a]))
